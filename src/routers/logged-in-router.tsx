@@ -4,7 +4,7 @@ import { Header } from "../components/header";
 import { useMe } from "../hooks/useMe";
 import { Restaurants } from "../pages/client/restaurants";
 
-const ClientRoutes = () => [
+const ClientRoutes = [
     <Route path="/" exact>
         <Restaurants />
     </Route>,
