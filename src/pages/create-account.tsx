@@ -89,10 +89,10 @@ interface ICreateAccountForm {
                     className="input"
                     />
                     {errors.email?.message && (
-                    <FormError errorMessage={errors.email?.message} />
+                        <FormError errorMessage={errors.email?.message} />
                     )}
                     {errors.email?.type === 'pattern' && (
-                        <FormError errorMessage={'Please enter a vaild email'} />
+                        <FormError errorMessage={'Please enter a valid email'} />
                     )}
                     <input
                     ref={register({ required: "Password is required" })}
@@ -103,7 +103,7 @@ interface ICreateAccountForm {
                     className="input"
                     />
                     {errors.password?.message && (
-                    <FormError errorMessage={errors.password?.message} />
+                        <FormError errorMessage={errors.password?.message} />
                     )}
                     <select
                         name='role'

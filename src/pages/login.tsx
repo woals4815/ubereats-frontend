@@ -25,40 +25,40 @@ mutation loginMutation($loginInput: LoginInput!) {
 interface ILoginForm {
     email: string;
     password: string;
-    resultError?: string;
-  }
+}
   
-  export const Login = () => {
+export const Login = () => {
     const { register, getValues, errors, handleSubmit, formState } = useForm<ILoginForm>({
         mode: 'onChange'
     });
     const onCompleted = (data: loginMutation) => {
         const {
-          login: { ok, token },
+            login: { ok, token },
         } = data;
         if (ok && token) {
-          localStorage.setItem(LOCALSTORAGE_TOKEN, token);
-          authTokenVar(token);
-          isLoggedInVar(true);
+            localStorage.setItem(LOCALSTORAGE_TOKEN, token);
+            authTokenVar(token);
+            isLoggedInVar(true);
         }
-      };
+    };
     const [loginMutation, { data: loginMutationResult, loading }] = useMutation<
-    loginMutation,
-    loginMutationVariables
+        loginMutation,
+        loginMutationVariables
     >(LOGIN_MUTATION, {
         onCompleted,
-        });
+    });
     const onSubmit = () => {
     if(!loading){    
         const { email, password } = getValues();
         loginMutation({
-        variables: {
-            loginInput: {
-                email,
-                password,
-            },
-            },
-        });}
+            variables: {
+                loginInput: {
+                    email,
+                    password,
+                    },
+                },
+            });
+        }
     };
     return (
         <div className="h-screen flex items-center flex-col mt-10 lg:mt-28">
@@ -124,4 +124,4 @@ interface ILoginForm {
             </div>
         </div>
         );
-    };
+};

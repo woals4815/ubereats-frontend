@@ -18,6 +18,7 @@
     "@types/react-router-dom": "^5.1.6",
     "apollo": "^2.32.0",
     "autoprefixer": "^10.1.0",
+    "cypress": "^6.2.0",
     "graphql": "^15.4.0",
     "postcss": "^8.2.1",
     "react": "^17.0.1",
@@ -59,6 +60,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/cypress": "^7.0.3",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-prettier": "^3.3.0",
     "mock-apollo-client": "^1.0.0",
