@@ -75,7 +75,7 @@ export const Dashboard = () => {
                         driverCoords.lng + 0.01
                     ),
                 },
-                travelMode: google.maps.TravelMode.WALKING,
+                travelMode: google.maps.TravelMode.TRANSIT,
                 },
                 (result) => {
                     directionsRenderer.setDirections(result);
