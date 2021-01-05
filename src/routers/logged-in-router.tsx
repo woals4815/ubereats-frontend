@@ -7,6 +7,7 @@ import { Category } from "../pages/client/category";
 import { Restaurant } from "../pages/client/restaurant";
 import { Restaurants } from "../pages/client/restaurants";
 import { Search } from "../pages/client/search";
+import { Order } from "../pages/order";
 import { AddDish } from "../pages/owner/add-dish";
 import { AddRestaurant } from "../pages/owner/add-restaurants";
 import { MyRestaurant } from "../pages/owner/my-restaurant";
@@ -41,6 +42,9 @@ const commonRoutes = [
     {
         path: "/edit-profile",
         component: <EditProfile />
+    },
+    {   path: "/orders/:id", 
+        component: <Order /> 
     }
 ]
 
