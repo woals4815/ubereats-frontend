@@ -56,7 +56,7 @@ describe("Login", () => {
         expect(errorMessage).toHaveTextContent(/password is required/i);
     });
     it("submits form and calls mutation", async () => {
-        const { getByPlaceholderText, debug, getByRole } = renderResult;
+        const { getByPlaceholderText, getByRole } = renderResult;
         const email = getByPlaceholderText(/email/i);
         const password = getByPlaceholderText(/password/i);
         const submitBtn = getByRole("button");

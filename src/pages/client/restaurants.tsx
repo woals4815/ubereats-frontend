@@ -58,7 +58,6 @@ export const Restaurants = () => {
             search: `?term=${searchTerm}`,
         });
     };
-    console.log(data);
     return (
         <div>
             <Helmet>
